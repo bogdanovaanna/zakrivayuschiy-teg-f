@@ -10,6 +10,15 @@
 
 body {
   margin: 0;
+  font-family: var(--font-sans);
+  background: var(--bg);
+  color: var(--card-bg); /* на тёмном фоне карточки светлые - текст тёмный внутри карточки переопределяется */
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+html,body { 
+  height:100%; 
 }
 
 h1,
@@ -28,6 +37,7 @@ li {
 
 a {
   color: inherit;
+  text-decoration: none;
 }
 
 button,
@@ -46,8 +56,20 @@ ol {
   position: absolute;
   inline-size: 1px;
   block-size: 1px;
+  margin:-1px; 
+  border:0; 
+  padding:0; 
   overflow: hidden;
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   white-space: nowrap;
 }
+
+img { 
+  display:block; 
+  max-width:100%; 
+  height:auto; 
+}
+
+
+

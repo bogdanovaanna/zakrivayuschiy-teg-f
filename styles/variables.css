@@ -1,1 +1,64 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; 
+  --font-mono: 'PressStart2P', monospace; 
+  --text-weight: 410;    
+  --heading-weight: 715; 
+    /* Резиновые значения для шапки */
+  --header-width: clamp(300px, 60%, 700px);
+  --header-height: clamp(250px, 40vh, 368px);
+  --head-pad: clamp(16px, 4vw, 80px);
+  --title-font-desktop: 65px;
+  --title-font-mobile: 49px;
+  --subtitle-font-desktop: 23px;
+  --subtitle-font-mobile: 14px;
+  --subtitle-pad: clamp(6px, 1vw, 14px);
+  --accent-weight: 400;
+  --bg: #fff;
+  --surface: #0f1720;
+  --card-bg: #fff;
+  --label-color: #000; /* основной цвет текста */
+  --label-stroke: #fff; /* цвет обводки текста */
+  --text: #000;
+  --muted: #666;
+  --accent: #fd24af;
+  --hero-min-height: 60vh;
+  --card-padding: 18px;
+  --transition-fast: 0.15s;
+  --transition-mid: 0.3s;
+  --grid-bg: 
+    /* Горизонтальные полосы */
+    repeating-linear-gradient(
+    to right,
+    #d3d3d3 0 2px,
+    transparent 2px 4px
+  ),
+  /* Вертикальные полосы */
+  repeating-linear-gradient(
+    to bottom,
+    #d3d3d3 0 2px,
+    transparent 2px 4px
+  ),
+  /* Плавный градиент сверху вниз */
+  linear-gradient(
+    to bottom,
+    #e7e7e7 0%,
+    #e7e7e7 0.01%,
+    #1a1a1a 100%
+  );
+}
+
+
+/* адаптив: для десктопа большие поля */
+@media (min-width: 1440px){
+  :root{
+    --head-pad: 100px;
+  }
+}
+
+/* адаптив: мобильный узенький */
+@media (max-width: 375px){
+  :root{
+    --head-pad: 12px;
+  }
+}
