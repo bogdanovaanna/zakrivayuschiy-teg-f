@@ -31,8 +31,12 @@
   background-image: 
     linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.7)),
     var(--grid-bg);
-  background-size: cover;
+  background-size: 100vw auto;
+  background-repeat: no-repeat;
+  background-position: center top;
+  width: 100vw;
   background-attachment: fixed;
+  overflow-x: hidden;
 }
 
 .header-inner {
@@ -509,8 +513,8 @@
   }
 
   .header-inner {
-    width: clamp(200px, 80%, 375px);
-    height: clamp(200px, 50vh, 327px);
+    width: clamp(375px, 80%, 700px);
+    height: clamp(327px, 50vh, 368px);
     padding: clamp(10px, 4vw, 20px);
   }
 

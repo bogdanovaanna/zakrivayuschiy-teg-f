@@ -6,23 +6,19 @@
   --heading-weight: 715;
   --accent-weight: 400; 
     /* Резиновые значения для шапки */
-  --header-width: clamp(300px, 60%, 700px);
+  --header-width: clamp(375px, 80%, 700px);
   --header-height: clamp(250px, 40vh, 368px);
+  --logo-size: clamp(49px, 10vw, 100px);
+  --title-font-size: clamp(20px, 6vw, 48px);
+  --subtitle-font-size: clamp(14px, 4vw, 24px);
   --head-pad: clamp(16px, 4vw, 80px);
-  --title-font-desktop: 65px;
-  --title-font-mobile: 49px;
-  --subtitle-font-desktop: 23px;
-  --subtitle-font-mobile: 14px;
-  --subtitle-pad: clamp(6px, 1vw, 14px);
 
   --bg: #fff;
   --card-bg: #fff;
   --label-color: #000; /* основной цвет текста */
   --label-stroke: #fff; /* цвет обводки текста */
   --text: #000;
-  --hero-min-height: 60vh;
   --card-padding: 25px;
-  --transition-fast: 0.15s;
   --transition-mid: 0.3s;
 
   --heart-contour-color: #000;      /* цвет контура по умолчанию */
