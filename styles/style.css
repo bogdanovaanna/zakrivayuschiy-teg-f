@@ -26,12 +26,10 @@
   display: flex;
   align-items: start;
   justify-content: center;
-  padding: var(--head-pad);
+  padding: 100px 0;
   position: relative;
-  background-image: 
-    linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.7)),
-    var(--grid-bg);
-  background-size: 100vw auto;
+  background-image: var(--grid-bg);
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
   width: 100vw;
@@ -55,7 +53,7 @@
 .site-title {
   margin: 0;
   font-family: var(--font-mono);
-  font-size: var(--title-font-desktop);
+  font-size: var(--logo-size);
   line-height: 0.9;
   text-transform: none;
   letter-spacing: -2px;
@@ -65,13 +63,13 @@
 
 .site-subtitle {
   display: inline-block;
-  margin-top: 1em;
+  margin-top: 0.9em;
   color: var(--text);
   padding: var(--subtitle-pad);
   font-family: var(--font-mono);
   font-weight: var(--accent-weight);
   max-width: 100%;
-  font-size: var(--subtitle-font-desktop);
+  font-size: var(--subtitle-font-size);
   text-align: center;
 }
 
@@ -86,7 +84,7 @@
 
 .cards {
   display: grid;
-  width: 700px;
+  width: var(--header-width);
   gap: 50px;
   grid-template-columns: 1fr;
   margin: -400px auto 0;
@@ -214,7 +212,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden; /* нужно для анимации псевдоэлемента */
+  overflow: hidden; 
   border: 2px solid currentColor;
   background: transparent;
   color: var(--text, #000);
@@ -222,7 +220,7 @@
   font-weight: var(--accent-weight);
   font-size: 14px;
   cursor: pointer;
-  transition: box-shadow 0.3s ease; /* плавный переход для фокуса */
+  transition: box-shadow 0.3s ease; 
 }
 
 .button__text {
@@ -263,7 +261,6 @@
   margin-bottom: 25px;
 }
 
-/* общая кнопка */
 .card__icon-button {
   display: inline-flex;
   align-items: center;
@@ -310,7 +307,7 @@
   top: 0;
   width: 39px;
   height: 36px;
-  pointer-events: none; /* клики проходят на кнопку */
+  pointer-events: none; 
 }
 
 /* Все шаги анимации изначально скрыты */
@@ -335,7 +332,6 @@
   100% { transform: scale(1); }
 }
 
-/* Тень при фокусе (опционально) */
 .card__like-button:focus-visible .like-icon {
   outline: 2px solid #000;
   outline-offset: 2px;
@@ -356,7 +352,6 @@
   z-index: 1;
 }
 
-/* Наведение — сдвиг псевдоэлемента, эффект «заливки» */
 .button-text:hover::before,
 .footer__save-button:hover::before,
 .button-ok:hover::before {
@@ -381,8 +376,8 @@
   height: 55px;
   gap: 8px;
   padding: 20px 15px;
-  background: #fff;               /* белый фон */
-  color: #000;                    /* черный текст */
+  background: #fff;              
+  color: #000;                    
   border: 2px solid #000;
   cursor: pointer;
   transition: all 0.25s ease;
@@ -507,54 +502,42 @@
 
 /* ===== ADAPTIVE ===== */
 
-@media (min-width: 375px) {
+@media (min-width: 375px)  {
   .site-header {
-    min-height: 667px;
+  min-height: 667px;
   }
 
-  .header-inner {
-    width: clamp(375px, 80%, 700px);
-    height: clamp(327px, 50vh, 368px);
-    padding: clamp(10px, 4vw, 20px);
-  }
-
-  .site-title {
-    font-size: var(--title-font-mobile);
-  }
-
-  .site-subtitle {
-    font-size: var(--subtitle-font-mobile);
-    padding: clamp(4px, 2vw, 10px);
+  .cards {
+    margin: -200px auto 0;
   }
 
   .card__media img { 
     height: 371px; 
   }
+
+  .footer__save-button {
+    flex-direction: column;
+    width: 306px;
+    height: 84px;
+  }
 }
 
 @media (min-width: 1440px){
   .site-header {
-    min-height: 960px;
+  min-height: 960px;
   }
 
-  .page { 
-    padding: var(--page-pad) 120px; 
+  .cards {
+    margin: -400px auto 0;
   }
 
   .card__media img { 
     height: 696px; 
   }
 
-  .site-title { 
-    font-size: var(--title-font-desktop);
-  }
-
-  .site-subtitle { 
-    font-size: var(--subtitle-font-desktop);
-  }
-
-  .header-inner {
-    width: 700px;
-    height: 368px;
+  .footer__save-button {
+    flex-direction: row;
+    width: 335px;
+    height: 55px;
   }
 }

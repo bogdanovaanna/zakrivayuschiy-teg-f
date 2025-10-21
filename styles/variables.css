@@ -8,9 +8,9 @@
     /* Резиновые значения для шапки */
   --header-width: clamp(375px, 80%, 700px);
   --header-height: clamp(250px, 40vh, 368px);
-  --logo-size: clamp(49px, 10vw, 100px);
+  --logo-size: clamp(49px, 10vw, 65px);
   --title-font-size: clamp(20px, 6vw, 48px);
-  --subtitle-font-size: clamp(14px, 4vw, 24px);
+  --subtitle-font-size: clamp(14px, 4vw, 23px);
   --head-pad: clamp(16px, 4vw, 80px);
 
   --bg: #fff;
