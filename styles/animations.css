@@ -10,23 +10,43 @@
 
 */
 
-/* =========================
-   Keyframes для LIKE
-   ========================= */
-@keyframes showStep1 { 0%{opacity:0; transform:scale(0.5);} 30%{opacity:1; transform:scale(1.1);} 60%{transform:scale(1);} 100%{opacity:0;} }
-@keyframes showStep2 { 0%{opacity:0; transform:scale(0.5);} 30%{opacity:1; transform:scale(1.2);} 100%{opacity:0;} }
-@keyframes showStep3 { 0%{opacity:0; transform:scale(0.8);} 40%{opacity:1; transform:scale(1.1);} 100%{opacity:0;} }
-@keyframes showStep4 { 0%{opacity:0; transform:scale(1.2);} 50%{opacity:1; transform:scale(1);} 100%{opacity:0;} }
-@keyframes showStep5 { 0%{opacity:0; transform:scale(0.8);} 30%{opacity:1; transform:scale(1.05);} 100%{opacity:1; transform:scale(1);} }
-
-/* =========================
-   Keyframes для HOVER
-   ========================= */
-@keyframes hoverCore { 0%{opacity:0; transform:scale(0.5);} 50%{opacity:1; transform:scale(1.1);} 100%{opacity:1; transform:scale(1);} }
-@keyframes hoverGlow { 0%{opacity:0; transform:scale(0.5);} 50%{opacity:1; transform:scale(1.05);} 100%{opacity:1; transform:scale(1);} }
-
-/* =========================
-   Keyframes для ACTIVE
-   ========================= */
-@keyframes activeCore { 0%{opacity:0; transform:scale(0.8);} 50%{opacity:1; transform:scale(1.1);} 100%{opacity:1; transform:scale(1);} }
-@keyframes activeStroke { 0%{opacity:0; transform:scale(0.8);} 50%{opacity:1; transform:scale(1.05);} 100%{opacity:1; transform:scale(1);} }
+@keyframes moving {
+   0% {
+     inset-inline-start: -20px;
+   }
+ 
+   100% {
+     inset-inline-start: -16px;
+   }
+ }
+ 
+ @keyframes core-coloring {
+   100% {
+     fill: var(--core-active-clr);
+   }
+ }
+ 
+ @keyframes main-body-coloring {
+   100% {
+     fill: var(--main-body-active-clr);
+   }
+ }
+ 
+ @keyframes contour-coloring {
+   100% {
+     fill: var(--contour-active-clr);
+   }
+ }
+ 
+ @keyframes icon-scaling {
+   100% {
+     transform: scale(1.5);
+     transform-origin: center;
+   }
+ }
+ 
+ @keyframes sparks-coloring {
+   100% {
+     fill: var(--sparks-fill-clr);
+   }
+ }

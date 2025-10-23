@@ -10,11 +10,11 @@
 
 body {
   margin: 0;
-  font-family: var(--font-sans);
-  background: var(--bg);
-  color: var(--card-bg); /* на тёмном фоне карточки светлые - текст тёмный внутри карточки переопределяется */
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
+  font-family: var(--font-sans), sans-serif;
+  background: var( --background-clr);
+  color: var(--card-bg); 
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 html,body { 

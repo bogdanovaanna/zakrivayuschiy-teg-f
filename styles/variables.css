@@ -1,7 +1,7 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
   --font-sans: 'Inter'; 
-  --font-mono: 'PressStart2P', monospace; 
+  --font-mono: 'PressStart2P', fantasy; 
   --text-weight: 410;    
   --heading-weight: 715;
   --accent-weight: 400; 
@@ -11,20 +11,26 @@
   --logo-size: clamp(49px, 10vw, 65px);
   --title-font-size: clamp(20px, 6vw, 48px);
   --subtitle-font-size: clamp(14px, 4vw, 23px);
-  --head-pad: clamp(16px, 4vw, 80px);
 
-  --bg: #fff;
+  --background-clr: #fff;
   --card-bg: #fff;
-  --label-color: #000; /* основной цвет текста */
-  --label-stroke: #fff; /* цвет обводки текста */
+  --label-color: #000; 
+  --label-stroke: #fff; 
   --text: #000;
   --card-padding: 25px;
   --transition-mid: 0.3s;
 
-  --heart-contour-color: #000;      /* цвет контура по умолчанию */
-  --heart-core-color: transparent;  /* сердцевина по умолчанию */
-  --heart-body-color: transparent;  /* основное тело по умолчанию */
-  --heart-active-color: red;        /* цвет при клике */
+  /* heart SVG */
+  --sparks-fill-clr: #f00;
+  --sparks-fill-clr-transparent: rgb(255 0 0 / 0%);
+  --contour-clr: rgb(0 0 0);
+  --core-clr: rgb(0 0 0);
+  --core-clr-transparent: rgb(0 0 0 / 0%);
+  --main-body-clr: rgb(0 0 0);
+  --main-body-clr-transparent: rgb(0 0 0 / 0%);
+  --contour-active-clr: #f00;
+  --core-active-clr: #f00;
+  --main-body-active-clr: #f00;
 
   --grid-bg: 
     /* Горизонтальные полосы */
@@ -48,15 +54,12 @@
   );
 }
 
-
-/* адаптив: для десктопа большие поля */
 @media (min-width: 1440px){
   :root{
     --head-pad: 100px;
   }
 }
 
-/* адаптив: мобильный узенький */
 @media (max-width: 375px){
   :root{
     --head-pad: 12px;
