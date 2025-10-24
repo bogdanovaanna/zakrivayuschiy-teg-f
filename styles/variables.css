@@ -53,15 +53,3 @@
     #1a1a1a 100%
   );
 }
-
-@media (min-width: 1440px){
-  :root{
-    --head-pad: 100px;
-  }
-}
-
-@media (max-width: 375px){
-  :root{
-    --head-pad: 12px;
-  }
-}
